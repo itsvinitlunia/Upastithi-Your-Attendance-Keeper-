@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Tracker</h1>
+
+        <!-- Add Timetable -->
+        <section>
+            <h2>Add Timetable</h2>
+            <form id="timetable-form">
+                <label for="day">Day:</label>
+                <select id="day" name="day" required>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <button type="submit">Add Timetable</button>
+            </form>
+            <p id="timetable-message" class="message"></p>
+        </section>
+
+        <!-- Mark Attendance -->
+        <section>
+            <h2>Today's Timetable</h2>
+            <div id="timetable-container">
+                <p>Loading today's classes...</p>
+            </div>
+        </section>
+
+        <!-- Export Attendance -->
+        <section>
+            <h2>Export Attendance</h2>
+            <button id="export-button">Export to Excel</button>
+            <p id="export-message" class="message"></p>
+        </section>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
